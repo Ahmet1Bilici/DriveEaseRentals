@@ -55,13 +55,14 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       className="object-contain"
                     />
                   </button>
+
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={generateCarImageUrls(car, "angle")}
+                        src={generateCarImageUrls(car)}
                         alt="car model"
-                        priority="blur"
                         fill
+                        priority
                         className="object-contain"
                       />
                     </div>
@@ -71,8 +72,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                         <Image
                           src={generateCarImageUrls(car, "29")}
                           alt="car model"
-                          priority="blur"
                           fill
+                          priority
                           className="object-contain"
                         />
                       </div>
@@ -80,8 +81,8 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                         <Image
                           src={generateCarImageUrls(car, "33")}
                           alt="car model"
-                          priority="blur"
                           fill
+                          priority
                           className="object-contain"
                         />
                       </div>
@@ -89,13 +90,14 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                         <Image
                           src={generateCarImageUrls(car, "13")}
                           alt="car model"
-                          priority
                           fill
+                          priority
                           className="object-contain"
                         />
                       </div>
                     </div>
                   </div>
+
                   <div className="flex-1 flex flex-col gap-2">
                     <h2 className="font-semibold text-xl capitalize">
                       {car.make} {car.model}

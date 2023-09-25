@@ -35,7 +35,7 @@ const CarCard = ({ car }: CarCardProps) => {
         <Image
           src={generateCarImageUrls(car)}
           alt="car model"
-          priority="blur"
+          priority
           fill
           className="object-contain"
         />
