@@ -83,7 +83,6 @@ const SearchManufacturer = ({
           </Transition>
         </div>
       </Combobox>
-      SearchManufacturer
     </div>
   );
 };
