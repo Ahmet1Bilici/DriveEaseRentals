@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import SearchBar from "@/components/SearchBar";
 import { fetchCars } from "@/utils/index";
 import Image from "next/image";
+import CarCard from "@/components/CarCard";
 
 export default async function Home() {
   const allCars = await fetchCars();

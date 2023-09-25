@@ -9,6 +9,9 @@ const CustomButton = ({
   containerStyles,
   handleClick,
   btnType,
+  textStyles,
+  rightIcon,
+  isDisabled,
 }: CustomButtonProps) => {
   return (
     <button
