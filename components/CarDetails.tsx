@@ -1,10 +1,10 @@
 "use client";
 
-import { CarProps } from "@/types/index";
-
-import Image from "next/image";
 import { Fragment } from "react";
+import Image from "next/image";
+
 import { Dialog, Transition } from "@headlessui/react";
+import { CarProps } from "@types";
 import { generateCarImageUrls } from "@/utils/index";
 
 interface CarDetailsProps {
