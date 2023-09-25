@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CarProps } from "@/types/index";
 import CustomButton from "./CustomButton";
 import { calculateCarRent } from "@/utils/index";
+import CarDetails from "./CarDetails";
 
 interface CarCardProps {
   car: CarProps;
@@ -30,12 +31,12 @@ const CarCard = ({ car }: CarCardProps) => {
         <span className="self-end text-[14px] font-medium">/day</span>
       </p>
 
-      <div className="relative 2-full h-40 my-3 object-contain">
+      <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/pattern.png"
+          src="/hero2.png"
           alt="car model"
+          priority="blur"
           fill
-          priority
           className="object-contain"
         />
       </div>
@@ -63,7 +64,7 @@ const CarCard = ({ car }: CarCardProps) => {
           </div>
         </div>
 
-        <div className="car-card_btn-container">
+        <div className="car-card__btn-container">
           <CustomButton
             title="View More"
             containerStyles="w-full py-[16px] rounded-full bg-primary-red"
@@ -73,6 +74,12 @@ const CarCard = ({ car }: CarCardProps) => {
           />
         </div>
       </div>
+
+      <CarDetails
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+        car={car}
+      />
     </div>
   );
 };
