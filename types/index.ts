@@ -10,6 +10,10 @@ export interface CustomButtonProps {
   isDisabled?: boolean;
 }
 
+export interface HomeProps {
+  searchParams: FilterProps;
+}
+
 export interface SearchManufacturerProps {
   manufacturer: String;
   setManufacturer: (manufacturer: string) => void;

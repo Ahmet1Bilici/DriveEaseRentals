@@ -6,8 +6,9 @@ import Image from "next/image";
 import CarCard from "@/components/CarCard";
 import { fuels, yearsOfProduction } from "@/constants/index";
 import ShowMore from "@/components/ShowMore";
+import { HomeProps } from "@/types/index";
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
